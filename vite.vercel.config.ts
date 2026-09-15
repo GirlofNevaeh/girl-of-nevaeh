@@ -1,0 +1,20 @@
+import { fileURLToPath, URL } from "node:url";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+
+export default defineConfig({
+  plugins: [tailwindcss(), react()],
+  resolve: {
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+      mqtt: fileURLToPath(new URL("./node_modules/mqtt/dist/mqtt.esm.js", import.meta.url)),
+    },
+  },
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
+    sourcemap: false,
+    chunkSizeWarningLimit: 4000,
+  },
+});
