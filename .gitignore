@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.project_id
+.github_repo
+.env
+.env.*
+.vercel/
+.grok/
+attachments/
+artifacts/
+screenshots/
+character-avatars/
+character-sprites/
+*.zip
+*.log
+.DS_Store
